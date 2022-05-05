@@ -1,0 +1,19 @@
+app:
+  # -- An applicationId obtained from the StackHawk platform. --
+  applicationId: da4a25bd-b466-4878-b778-a18f55ed7826 # (required)
+  # -- The environment for the applicationId defined in the StackHawk platform. --
+  env: Development # (required)
+  # -- The url of your application to scan --
+  host: http://localhost:3000 # (required)
+
+
+# -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
+  graphqlConf: 
+    enabled: true
+    schemaPath: /graphql # OR...
+#     filePath: introspectionSchema.json
+    operation: ALL # Types: ALL, QUERY, MUTATION
+    requestMethod: POST # Types: POST, GET
+  autoPolicy: true
+  autoInputVectors: true
+  # Configuration Docs: https://docs.stackhawk.com/hawkscan/configuration/
